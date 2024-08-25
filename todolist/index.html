@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list with local storage</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="in">
+<div class="head">
+    <h1>Todo list</h1>
+</div>
+<div class="details">
+   <label>
+   <p class="text1">Task</p>
+    <input type="text" placeholder="Task name" id="task">
+   </label>
+   <label>
+    <p class="text2">Description</p>
+  <textarea placeholder="Provide description" id="description"></textarea>
+   </label>
+</div>
+<div class="priority">
+   <label>
+    <input type="radio" value="Lowpri" name="radio" checked>
+    Low priority
+   </label>
+   <label>
+    <input type="radio" value="Highpri" name="radio">
+    High priority
+   </label>
+</div>
+    <input type="submit" id="submit">
+    <!-- if we reomve this at the time of reload before input field will be poped up there will size conflict due to flex so we set div as a size of input field -->
+<div class="increase_width_before_popup"></div>
+</div>
+<div class="combine_filterand_work">
+<div class="filter">
+        <p class="filter_text">Filter</p>
+    <select name="" id="select">
+        <option value="All">All</option>
+        <option value="Lowpri">Lowpriority</option>
+        <option value="Highpri">Highpriority</option>
+    </select>
+  </div>
+<div class="out">
+    
+<div class="todos">
+</div>
+</div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
+
+!
