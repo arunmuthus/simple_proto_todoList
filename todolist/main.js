@@ -30,8 +30,9 @@ submit_button_click.addEventListener("click",()=>{
   var  task_name=document.querySelector("#task").value; // getting task name
    var getting_description = document.querySelector("#description").value;// getting  description name
 
+    
+  var radio_button_value = document.querySelector("input[name='radio']:checked").value; 
 
-  // var radio_button_value = document.querySelector("input[name='radio']:checked").value;  as we put low priority as checked in html usign checked
 
    // checking whether it is empty
   if(task_name==="" || getting_description==="" || !radio_button_value){
@@ -79,6 +80,7 @@ submit_button_click.addEventListener("click",()=>{
    
     // adding span to open and close description div
    var span_div = document.createElement("span");
+   span_div.classList.add("spandiv"); // for some bug purpose added see in select js code 
    span_div.style.cursor="pointer";
    span_div.style.fontSize="25px"
    span_div.textContent = '↓';
@@ -112,7 +114,12 @@ select_options.addEventListener("change",()=>{
    var description_div_filtering = Array.from(document.querySelectorAll(".description"));// getting description text div
    var filtering_order = select_options.value; // select button value if need that onbetween text put .text
    
-   
+
+   var spandiv_change = Array.from(document.querySelectorAll(".spandiv"));
+   spandiv_change.forEach((e)=>{
+      e.textContent = '↓';
+   })
+   console
    // logic for task div hiding 
    inner_div_filtering.forEach((e)=>{
       var filter_attribute_value = e.getAttribute("filter");
